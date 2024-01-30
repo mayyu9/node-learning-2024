@@ -13,7 +13,14 @@ app.get('/users', (req, res) => {
 })
 
 app.post('/users', (req, res) => {
-    return res.json({message: ' Thanks for signup'})
+    return res.json({message: 'Thanks for signup'})
+})
+
+// path parameters support
+
+app.get('/users/:id', (req, res) => {
+    const id = req.params.id;
+    return res.json({message: `Id is ${id}`})
 })
 
 app.listen(port, () => console.log('Express app started on server 8000'))
