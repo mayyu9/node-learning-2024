@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/users', (req, res) => {
-    return res.json({ users: ['A', 'B', ' C']})
+    return res.json({ users: ['A', 'B', ' C', 'D']})
 })
 
 app.post('/users', (req, res) => {
